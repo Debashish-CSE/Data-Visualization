@@ -1,0 +1,66 @@
+# Ignore compiled C/C++ binaries
+*.out
+*.o
+*.a
+*.so
+*.exe
+*.obj
+*.dll
+
+# Ignore core dump files
+core*
+*.core
+
+# Ignore Java class files and log files
+*.class
+*.log
+*.jar
+
+# Ignore Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore R-specific files
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*.rds
+*.Rproj.user
+
+# Ignore LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.dvi
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.idx
+*.ilg
+*.ind
+*.glg
+*.glo
+*.gls
+*.ist
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore backup files
+*.bak
+*.tmp
