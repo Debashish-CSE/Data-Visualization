@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,bending,positioning}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+    \\
+    \node[draw,circle,fill,label=north west:A] (a) at (2,0) {};
+    \node[draw,circle,fill,label=south west:C] (c) at (2,-5) {};
+    \node[draw,circle,fill,label=north east:B] (b) at (10,0) {};
+    \node[draw,circle,fill,label=south east:D] (d) at (10,-5) {};
+    \node[draw,circle,fill,label=north:E] (e) at (3.5,-2.5) {};
+    \node[draw,circle,fill,label=below:F] (f) at (8.5,-2.5) {};
+
+    \draw[very thick] (a) -- (b);
+    \draw[very thick] (b) -- (d);
+    \draw[very thick] (c) -- (d);
+    \draw[very thick] (c) -- (a);
+    \draw[very thick] (e) -- (f);
+    \draw[very thick] (f) -- (b);
+    \draw[very thick] (f) -- (c);
+    \draw[very thick] (c) -- (e);
+    \draw[very thick] (a) -- (e);
+    \draw[very thick] (e) -- (b);
+    \draw[very thick] (f) -- (d);
+    %\draw[bend right] (2,0) -- (10,-5);
+    \draw[very thick] (a) edge [in=15, out=30,looseness=3] (d);
+
+
+    
+\end{tikzpicture}
+
+\end{document}

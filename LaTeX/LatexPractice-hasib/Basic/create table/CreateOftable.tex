@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\title{Create Table}
+\author{MD Hasib Mia}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\clearpage
+	
+	%----------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	%--------------------------------------------------------------create table--------------------------------------------------------------------------------
+	
+	\section{Create a normal Table:}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|p{3cm}|p{5cm}|p{3cm}|}
+			\hline
+			Name & Address & Phone number \\
+			 \hline
+			John Doe & 123 Main Street, Apartment 456, Big City & 555-1234\\
+			 \hline
+			Jane Smith & 456 Oak Avenue, Suite 789, Another City & 555-5678 \\ 
+			\hline
+		\end{tabular}
+		\caption{Member of my Family}
+	\end{table}
+	
+	
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------merge colom---------------------------------------------------------------------------------------------
+% Required Method: \multicolumn{number of merge colum}{position }{text}     position can be:center= |c|,left=|l|,right=|r|
+\section{Create table with merge colum:}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Name & Address & Phone number \\ 
+		\hline
+		\multicolumn{2}{|c|}{John Doe} & 555-1234 \\
+		 \hline
+		Jane Smith & 456 Oak Ave. & 555-5678 \\
+		 \hline
+	\end{tabular}
+	\caption{Contact Information}
+\end{table}
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+%------------------------------------------------------------------merge row------------------------------------------------------------------------------
+% For this: Required package: \usepackage{multirow} and method: \multirow{number of rows}{width or *}{text}
+
+\section{Create table with merge raw:}
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Name                   & Address      & Phone number \\ 
+		\hline
+		
+		\multirow{2}{*}{Hasib} & Rouha         & 555-1234  \\
+		
+		 \cline{2-3}
+		                        & CU           & 555-5678    
+		                         \\ \hline
+		Jane Smith             & 456 Oak Ave.  & 555-7890    
+		 \\ \hline
+	\end{tabular}
+	\caption{Contact Information}
+\end{table}
+%---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------cell color----------------------------------------------------------------
+	
+	\section{Coloring table}   %------------> For cell color: required package: \usepackage[table]{xcolor} and method: \cellcolor{color_nmae}
+	\subsection{Cell color}
+	
+	\begin{table}[htp]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+		\cellcolor{red!20}	Name & Id & Dept.\\
+			\hline
+			Hasib &01 & CSE\\
+			\hline
+			Rafi &  \cellcolor{green!60}02 & EEE \\
+			\hline
+			Nayem & 3 & Physics \\
+			\hline
+		\end{tabular}
+		\caption{Cell Color}
+	\end{table}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------row color----------------------------------------------------------------------------------------
+   %------------> For row color: required package: \usepackage[table]{xcolor} and method: \rowcolor{color_nmae}
+\subsection{Row color color}
+
+ \begin{table}[htp]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+	\rowcolor{red!20} Name & Id & Dept.\\
+		\hline
+	             	  Hasib &01 & CSE\\
+		\hline
+					   Rafi  &02 & EEE \\
+		\hline
+\rowcolor{green!20}    Nayem & 3 & Physics \\
+		\hline
+	\end{tabular}
+	\caption{Row color Color}
+ \end{table}
+
+
+
+
+
+
+	
+\end{document}

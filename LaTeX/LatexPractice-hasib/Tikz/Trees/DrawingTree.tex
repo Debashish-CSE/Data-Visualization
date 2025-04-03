@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{forest}
+\usepackage{tikz}
+\title{Drawing Tree with Tikz}
+\author{MD Hasib Mia}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\clearpage
+	
+	%---------------------------------------------------------------------------Create node------------------------------------------------
+	
+   \section{Create node and Color:}
+   
+   
+	\subsection{use various shape}
+	\subsubsection{Normal Node}
+	\begin{forest}
+		[A]
+	\end{forest}
+	
+	
+
+	\subsubsection{Circle shaped node:}
+	\begin{forest}
+		[A,circle,draw]
+	\end{forest}
+	
+	
+	\subsubsection{Rectangle shaped node:}
+	\begin{forest}
+		[A,rectangle,draw]
+	\end{forest}
+	
+	
+	
+	\subsubsection{All shape in one tress:}
+	\begin{forest}
+		[A,circle,draw[B,rectangle,draw][C]]
+	\end{forest}
+	
+	
+	
+	\subsection{Coloring of node:}
+	\begin{forest}
+		[A,circle,draw,color=black,fill=red!20]
+	\end{forest}
+	%---------------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	%---------------------------------------------------------Draw simple trees--------------------------------------------------------
+	\section{Drawing Simple tree}
+	
+	
+	\subsection{Parent Node: A and Child Node B,C:}
+		% Here A----> is parent and B,C are child node.
+		% Procedure: [p[c1][c2].......]
+	\begin{forest}
+		[A[B][C]]
+	\end{forest}
+	
+	
+	
+	
+	\subsection{More node with tree :}
+     \begin{forest} 
+     	[A[B[D[1][2]][E[3][4]]][C[F[5][6]][G[7][8]]]]
+     \end{forest}
+     
+     
+     
+     \subsection{More node with tree with a single shape:}     
+     \begin{forest} for tree={circle,draw}
+     	[A[B[D[1][2]][E[3][4]]][C[F[5][6]][G[7][8]]]]
+     \end{forest}
+     
+     
+     
+     
+     \subsection{Draw Horizontal tree:}
+     \begin{forest} for tree={grow'=0}
+     	[A[B[D[1][2]][E[3][4]]][C[F[5][6]][G[7][8]]]]
+     \end{forest}
+     %-----------------------------------------------------------------------------------------------------------------------------
+     
+    
+    %-----------------------------------------------------Shifting------------------------------------------------------------------- 
+     \section{shifting of tree}
+	\subsection{left side shift of Tree: (calign=first)}
+	\begin{forest} 
+		[A,calign=first[B[1][2]][C[3][4]]]
+	\end{forest}
+	
+	
+	
+	
+	\subsection{Right side shift of Tree: (calign=last)}
+     \begin{forest} 
+	[A,calign=last[B[1][2]][C[3][4]]]
+    \end{forest}
+
+%----------------------------------------------------------------------------------------------------------------------------------------
+
+	\section{Align all first child node connected with immediate parent node by stright line:}
+	% For this operation we have to use : for tree={calign=first}
+	%For Set label of edge: edge label={node[midway, left] {Label 1}}
+	 \begin{forest}
+	 	for tree={calign=first}
+		[A[B[D[1][2]][E[3][4]]][C[F[5][6]][G[7][8]]]]
+	\end{forest}
+	
+	%-------------------------------------------------Practice--------------------------------------------------------------------
+	
+	
+	\section{practice}
+	\subsection{Practice-1:Vertical trees:}
+	\begin{forest}
+		[1[2[A][B[C][D]]][3[E][F[G][H]]]]
+	\end{forest}
+	
+	
+    \subsection{Practice-2:Horizontal trees:}
+   \begin{forest} for tree={grow'=0}
+	[1[2[A][B[C][D]]][3[E][F[G][H]]]]
+    \end{forest}
+    
+    
+    
+    \subsection{practice-3: trees with rectangular node:}  
+    \begin{forest}
+    	for tree={draw}
+    	[27[22[22[22][8]][17[14][17]]][27[9[3][9]][27[27][11]]]]
+    \end{forest}
+
+	
+\end{document}

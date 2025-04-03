@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{tikz}
+\title{Basic Drawing Practice}
+\author{MD Hasib Mia}
+\begin{document}
+	\maketitle
+	\section{Draw line}
+	\begin{tikzpicture}
+		\draw[thick,->] (0,0) --(7,0);
+	\end{tikzpicture}
+	\section{Axis line}
+	\begin{tikzpicture}
+		\draw[thick,->] (0,0) --(4,0);
+		\draw[thick,->] (0,0) --(0,4);
+		
+	\end{tikzpicture}
+	\subsection{Axis line}
+	\begin{tikzpicture}
+		\draw[thick,->] (0,0) --(4,0) node[anchor=north west]{x axis};
+		
+		\draw[thick,->]  (0,0) --(0,4)node[anchor=south east] {y axis};
+		
+	\end{tikzpicture}
+	\section{Circle}
+	\begin{tikzpicture}
+		
+		\draw[thick] (0,0) circle(2);
+		
+	\end{tikzpicture}
+	
+	\section{Circle with dash}
+	\begin{tikzpicture}
+		
+		\draw[thick,red,dash dot] (0,0) circle(2);
+		
+	\end{tikzpicture}
+	\section{Traingle}
+	\begin{tikzpicture}
+		
+		
+		\draw (0,0)--(3,0);
+		\draw(0,0)--(0,3);
+		\draw(3,0) --(0,3);
+	\end{tikzpicture}
+	\section{Rectangle}
+	\begin{tikzpicture}
+		
+		\draw(0,0) rectangle(2,2);
+	\end{tikzpicture}
+	\section{Parabola}
+	\begin{tikzpicture}
+		
+		\draw(0,0) parabola(2,2);
+	\end{tikzpicture}
+	\section{Curved}
+	\begin{tikzpicture}
+		
+		\draw(0,0) ..controls(0,2) and(4,0)  ..(4,4);
+	\end{tikzpicture}
+	\section{Grid}
+	\begin{tikzpicture}
+		
+		\draw[step=1cm,black,thin](-2,-2) grid(6,6);
+	\end{tikzpicture}
+	
+	$\frac{2}{de3}$
+	\section{Arc:}
+	\begin{tikzpicture}
+		
+		\draw[very thick](0,0) arc (0:180:2cm);
+	\end{tikzpicture}
+	\section{parabollah}
+	\begin{tikzpicture}
+		
+		\draw(0,0) ellipse(3cm and 1.5cm);
+	\end{tikzpicture}
+\end{document}
