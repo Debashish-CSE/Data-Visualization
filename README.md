@@ -39,7 +39,7 @@ Here is the hierarchical structure of the repository:
 
 ---
 
-## How to Use
+##🚀 How to Use
 
 Each folder is **self-contained**—navigate directly to the folder of interest to find source code, scripts, or reports.
 
@@ -61,7 +61,7 @@ Rscript analysis.R
 
 ---
 
-## Learning Purpose
+##🎓 Learning Purpose
 
 This repository serves as a **learning archive and reference** for:
 
@@ -75,6 +75,6 @@ Feel free to use these resources for study, inspiration, or as a starting point 
 
 ---
 
-## License
+##📝 License
 
 This repository is licensed under the [MIT License](LICENSE).
